@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello, world!</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="favicon.png">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    label {
+      font-size: 1.2rem;
+    }
+    input {
+      font-size: 1.2rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 1rem;
+    }
+    button {
+      font-size: 1.2rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3e8e41;
+    }
+    span {
+      font-weight: bold;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rent Due Calculator</h1>
+  <p>Base utilty: <span id="baseUtil"> 421.35</span> </p>
+  <p>Utility Differnce:<span id="diff"> </span> </p>
+  <p>Utility Differnce per Person:<span id="diffper"> </span> </p>
+  <p>Samuel:<span id="sam">  912.11 </span> </p>
+  <p>Rustem:<span id="rus">  834.62</span> </p>
+  <p>Will:<span id="will">  834.62</span> </p>
+  <label for="util">ENTER Utility fee:</label>
+  <input type="number" id="util" name="fname"><br><br>
+  <button onclick="myFunction()">Calculate Rent</button>
+
+
+
+
+
+
+  <script>
+    function myFunction() {
+      let x = document.getElementById("util").value;
+      let diff = (x - 421.35).toFixed(2);
+      let diffper = (diff/3).toFixed(2);
+      let sam = 912.11+ parseFloat(diffper);
+     let will = 834.62+ parseFloat(diffper);
+   
+      document.getElementById("diff").innerHTML = diff;
+      document.getElementById("diffper").innerHTML = diffper;
+      
+    
+  console.log(sam);
+      document.getElementById("sam").innerHTML = sam;
+      document.getElementById("rus").innerHTML = will;
+      document.getElementById("will").innerHTML = will;
+   
+    }
+    </script>
+
+</body>
+
+
+
+
+
+</html>
